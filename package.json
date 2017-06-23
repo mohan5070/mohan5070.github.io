@@ -1,0 +1,17 @@
+{
+  "name": "mohanraj",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohan",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-route": "^1.6.4",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "gulp-livereload": "^3.8.1"
+  }
+}
