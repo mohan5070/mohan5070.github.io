@@ -1,21 +1,32 @@
-angular.module('myApp',['ngRoute'])
-    .config(function($routeProvider) {
-        'use strict';
+$(function() {
 
-        $routeProvider
-            .when('/', {
-                templateUrl: 'js/pages/about.html'
-            })
-            .when('/portfolio', {
-                templateUrl: 'js/pages/portfolio.html'
-            })
-            .when('/blog', {
-                templateUrl: 'js/pages/blog.html'
-            })
-            .when('/contact',  {
-                templateUrl: 'js/pages/contact.html'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
+    var $pageDom = $('#page-content-wrapper');
+    var $listItems = $('.sidebar-nav li');
+
+    $listItems.click(function(e) {
+        var currentDom = $(e.currentTarget);
+        var pageName = currentDom.data('page');
+        $listItems.removeClass('active');
+        currentDom.addClass('active');
+        $('.row').addClass('hide')
+        $('.'+pageName+'-content').removeClass('hide');
     });
+
+    $('.portfolio-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        rows:2
+    });
+
+    $(".blog-slider").slick({
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        customPaging : function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="'+thumb+'"></a>';
+        },
+    });
+
+});

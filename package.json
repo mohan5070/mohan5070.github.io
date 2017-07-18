@@ -12,6 +12,7 @@
     "angular-route": "^1.6.4",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
-    "gulp-livereload": "^3.8.1"
+    "gulp-livereload": "^3.8.1",
+    "jquery": "^3.2.1"
   }
 }

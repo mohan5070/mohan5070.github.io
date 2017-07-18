@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Mohan Insights</title>
@@ -11,20 +11,24 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <div class="brand">
-                <img src="" alt=""/>
-                <h3>Tester</h3>
+                <h2 class="logo">M</h2>
+                <!--<img src="" alt=""/>-->
+                <h3>Mohan</h3>
             </div>
             <ul class="sidebar-nav">
-                <li class="active">
-                    <a href="#!/">About</a>
+                <li class="active" data-page="intro">
+                    <a href="#!/">Home</a>
                 </li>
-                <li>
+                <li  data-page="about">
+                    <a href="#!/about">About</a>
+                </li>
+                <li data-page="portfolio">
                     <a href="#!/portfolio">Portfolio</a>
                 </li>
-                <li>
+                <li data-page="blog">
                     <a href="#!/blog">Blog</a>
                 </li>
-                <li>
+                <li data-page="contact">
                     <a href="#!/contact">Contact</a>
                 </li>
             </ul>
@@ -33,7 +37,90 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div ng-view></div>
+            <div class="container-fluid">
+                <div class="row text-center intro-content">
+                    <div class="image-cropper">
+                        <img src="" class="rounded" />
+                    </div>
+                    <h3 class="desig">&lt;WEB DEVELOPER/&gt;</h3>
+                    <div class="icons-group">
+                        <div class="icons"><i class="fa fa-2x fa-desktop"></i></div> <span>or</span>
+                        <div class="icons"><i class="fa fa-3x fa-mobile-phone"></i></div> <span>or</span>
+                        <div class="icons"><i class="fa fa-3x fa-tablet"></i></div>
+                    </div>
+                    <p>Action speaks louder than words</p>
+                </div>
+
+                <div class="row icons-group about-content hide">
+                    <h4 class="page-title">About me</h4>
+
+                    <div class="col-xs-4 box">
+                        <div class="icons"><i class="fa fa-3x fa-television"></i></div>
+                        <h4>Interaction Design</h4>
+                        <p class="desc">A great interface is based upon solid interaction design</p>
+                    </div>
+                    <div class="col-xs-4 box">
+                        <div class="icons"><i class="fa fa-2x fa-desktop"></i></div>
+                        <h4>Prototyping</h4>
+                        <p class="desc">A prototype is great for showing new product concepts</p>
+                    </div>
+                    <div class="col-xs-4 box">
+                        <div class="icons"><i class="fa fa-2x fa-desktop"></i></div>
+                        <h4>Visual Design</h4>
+                        <p class="desc">I strive for effective design. That often comes down to the art of reduction</p>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="bottom-line">
+                        <p class="general-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime molestiae, voluptate! Consectetur dicta dolores eum impedit ipsum obcaecati placeat ullam.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum iure nulla obcaecati repellat repudiandae sunt veniam? Atque consequatur deleniti dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam deserunt doloremque doloribus dolorum impedit iusto, libero magni, nesciunt odit quos rerum saepe sapiente! A aperiam asperiores delectus iusto maxime numquam odit porro quibusdam, quod repudiandae rerum saepe ullam vel?
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row portfolio-content hide">
+                    <h4 class="page-title">Portfolio</h4>
+
+                    <div class="slider-container">
+                        <div class="portfolio-slider">
+                            <div><img src="img/1.png" alt="" width="200px"/></div>
+                            <div><img src="img/2.png" alt="" width="200px" /></div>
+                            <div><img src="img/3.png" alt="" width="200px" /></div>
+                            <div><img src="img/4.png" alt="" width="200px" /></div>
+                            <div><img src="img/5.png" alt="" width="200px" /></div>
+                            <div><img src="img/6.jpg" alt="" width="200px" /></div>
+                            <div><img src="img/7.jpg" alt="" width="200px" /></div>
+                            <div><img src="img/8.jpg" alt="" width="200px" /></div>
+                            <div><img src="img/9.jpg" alt="" width="200px" /></div>
+                            <div><img src="img/11.jpg" alt="" width="200px" /></div>
+                            <div><img src="img/12.jpg" alt="" width="200px" /></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row blog-content hide">
+                    <h4 class="page-title">Blog</h4>
+
+                    <div class="slider-container">
+                        <div class="blog-slider">
+                            <div><img src="img/1.png" alt="" width="400px"/></div>
+                            <div><img src="img/2.png" alt="" width="400px" /></div>
+                            <div><img src="img/3.png" alt="" width="400px" /></div>
+                            <div><img src="img/4.png" alt="" width="400px" /></div>
+                            <div><img src="img/5.png" alt="" width="400px" /></div>
+                            <div><img src="img/6.jpg" alt="" width="400px" /></div>
+                            <div><img src="img/7.jpg" alt="" width="400px" /></div>
+                            <div><img src="img/8.jpg" alt="" width="400px" /></div>
+                            <div><img src="img/9.jpg" alt="" width="400px" /></div>
+                            <div><img src="img/11.jpg" alt="" width="400px" /></div>
+                            <div><img src="img/12.jpg" alt="" width="400px" /></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <!-- /#page-content-wrapper -->
 
@@ -41,8 +128,8 @@
 
 
 
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/slick/slick.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
