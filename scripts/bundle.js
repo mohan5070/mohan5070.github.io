@@ -31977,24 +31977,102 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":69}],197:[function(require,module,exports){
+module.exports = {
+    title: 'Bangalore To Kanniyakumari',
+    date: '21 June 2017',
+    content: 'yet to write'
+};
+
+},{}],198:[function(require,module,exports){
+module.exports = {
+    title: 'Clean Code Convention',
+    date: '21 June 2017',
+    content: '<p>After I went through lot of research, I got this conventions from geeks who enormously shared their experience and best practices about coding via numerous courses on the internet. I will share some of my notes with the hope of helping some newbies out there.&nbsp; This blog is irrespective of one language or domain. So no matter which technology you are working currently. You can follow this conventions and it will rapidly polish your coding standards. Okay, let&rsquo;s dive in.</p><p>&ldquo;<a href="https://app.pluralsight.com/player?course=writing-clean-code-humans&amp;author=cory-house&amp;name=writing-clean-code-humans-m1-intro&amp;clip=0&amp;mode=live&amp;start=58"><strong>Any fool can write code that a computer can understand. Good programmers write code that humans can understand</strong>.</a>&rdquo; &ndash; Martin Fowler</p><p><strong>Core Rules:-</strong></p><ol><li>Never mix up two technologies in one file</li></ol><ul><li>eg: Never put HTML code in Javascript strings and vice versa</li></ul><ol start="2"><li>Code should not be excessively wordy</li><li>Intent should be very clear and expressive</li><li>Code (Method/Function) should do one thing at a time.</li><li>Clean up your code before next task.</li></ol><p>&nbsp;</p><p><strong>The Rule of 7</strong></p><p>Human memory cannot hold more than 7 item in a short-term memory, so the code, having more than 7 items in scope makes it difficult for the reader to comprehend the code. Thus use parameters or variable within this count.</p><p><strong>DRY principles</strong></p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>It derives &ldquo;Don&rsquo;t Repeat yourself&rdquo;.&nbsp; <a href="https://app.pluralsight.com/player?course=writing-clean-code-humans&amp;author=cory-house&amp;name=writing-clean-code-humans-m2-principles&amp;clip=5&amp;mode=live&amp;start=35">Copy and paste is often a sign of a design problem and can easily be eliminated by creating a reusable function</a>&nbsp;<a href="https://app.pluralsight.com/player?course=writing-clean-code-humans&amp;author=cory-house&amp;name=writing-clean-code-humans-m2-principles&amp;clip=5&amp;mode=live&amp;start=41">or adding a parameter to an existing function to make it more flexible.</a> Always try to keep one logic separate. Never duplicate code. Our ultimate goal is minimizing the line in the code base. Few line of code co-related to fewer bugs.</p><p><strong>Self Documenting</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clearly written code is self documenting its purpose as you write. Understanding other programmer&rsquo;s intent is the biggest problem in the software development. So follow these:-</p><ol><li>Clear intent</li><li>Layer of abstractions</li><li>Format for readability</li><li>Favor code over comments</li></ol><p><strong>Naming Conventions</strong></p><p><strong>Variables</strong></p><p><strong>&nbsp; </strong>The thumb rule for naming is &ldquo;Name should be meaningful&rdquo; and self explanatory. Also Create variables very near to its first use.</p><p>&nbsp;</p><p>Bad Naming:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Good Naming:</p><p>&nbsp;&nbsp;&nbsp;&nbsp; l=0, t=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length = 0, total=3;</p><p><strong>Classes</strong></p><ul><li>Noun (ex: Animal, Vehicle)</li><li>UpperCamelcase (ex: VehicleMaintenance)</li><li>Should explain Single responsibility</li><li>Avoid generic suffixes like<ul><li>PricingVehicle</li><li>TestFunction</li></ul></li></ul><p>&nbsp;</p><p><strong>Method/Function</strong></p><ul><li>It should read what it does</li><li>Write name which is so descriptive</li><li>Avoid abbreviation (ex: regUser)</li><li>Avoid these:<ul><li>Get</li><li>Process</li><li>Pending</li></ul></li><li>Follow these:<ul><li>getRegisteredUsers</li><li>isValidSubmission</li><li>sendEmail</li></ul></li></ul><p>&nbsp;</p><p><strong>Boolean Naming</strong></p><ul><li>Avoid these:<ul><li>Open</li><li>Status</li></ul></li><li>Follow these:<ul><li>isOpen</li><li>isActive</li></ul></li></ul><p>&nbsp;</p><p><strong>Conditional checks</strong></p><p><strong>Boolean</strong></p><ul><li>Bad code:<ul><li>If(isActive === true)</li></ul></li><li>Clean code<ul><li>If(isActive)</li></ul></li></ul><p>&nbsp;</p><ul><li>Bad code:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(mangoes &gt; 6) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isLog = true;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isLog = false;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><ul><li>Clean code:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp; isLog =&nbsp;&nbsp; mangoes &gt; 6</p><p>&nbsp;</p><p><strong>Undefined&nbsp; numbers</strong></p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Bad code:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (age &gt; 21)&nbsp; //what is 21?</p><p>Clean code:</p><p>&nbsp;&nbsp;&nbsp;&nbsp; Var legalAge = 21;</p><p>&nbsp;&nbsp;&nbsp;&nbsp; If(age &gt; legalAge)</p><p>&nbsp;</p><p>&hellip;&hellip;&hellip;&hellip;. Lot more code examples are yet to come.. I am working on by best&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</p><p><strong>Functions structure rule</strong></p><ul><li>Rarely be 20 lines</li><li>Hardly over 100 lines</li><li>No more than 3 parameters</li><li>No more than 3 indentation</li><li>Simple function can be larger</li><li>Complex function can be shorter</li><li>Function call and function definition must be closer to reach immediately</li><li>If no room for above mentioned rules, break into separate functions, and follow the rules</li></ul><p><strong>&nbsp;</strong></p><p><strong>&nbsp;</strong></p><p><strong>Comments</strong></p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Comments are only necessary when following things occur:</p><ol><li>Todo (explains what needs to be done)</li><li>Summary (about the logic of the piece of code)</li><li>Documentaion (ex: commenting what inputs are valid for particular code)</li></ol><p>&nbsp;</p><p><strong>Avoid These Mistakes</strong></p><ol><li>Highly cyclomatic complexcity</li><li>Ensure indentation</li><li>Unnecessary comments</li><li>Poorly name structure</li><li>Huge classes</li><li>Long methods</li><li>Repetition</li><li>No whitespace</li><li>Overly verbose</li></ol><p>&nbsp;</p><p>Summary</p><p>&nbsp;&nbsp;&nbsp;&nbsp; Refactoring the code involves potential risk and its likely to break something which is working perfectly fine for long time. So never ever touch any code for your desire for cleanliness.&nbsp; I would like to wrap up this article with the quote.</p><p><strong>&nbsp;&ldquo; Always leave the code you&rsquo;re editing&nbsp; a little better than you found it&rdquo; &ndash; Robert C. Martin</strong></p><p>&nbsp;</p><p>Thanks for reading. Strive for clean code. All the best.</p>'
+};
+
+},{}],199:[function(require,module,exports){
+module.exports = {
+    title: 'Gettting Starter Kit',
+    date: '21 June 2017',
+    content: '<p>Yet to write...</p>'
+};
+
+},{}],200:[function(require,module,exports){
+module.exports = {
+    title: 'HTML5 Web Components',
+    date: '21 June 2017',
+    content: '<p>Yet to write...</p>'
+};
+
+},{}],201:[function(require,module,exports){
+module.exports = {
+    title: 'Javascript Hiccups and Solutions',
+    date: '21 June 2017',
+    content: '<p>Yet to write...</p>'
+};
+
+},{}],202:[function(require,module,exports){
+module.exports = {
+    title: 'UX Principles',
+    date: '21 June 2017',
+    content: '<p style="margin-bottom: 0.11in">My latest read on UX fundamentalsabsolutely changed my perceptions towards front end development. Alsoit motivated me to think more user centered design principles. Let’skick off with a quote</p><p style="margin-bottom: 0.11in">“Design is not just what it lookslike, Design is how it works” - Steve Jobs</p><p style="margin-bottom: 0.11in">“Its one eye and one thumb thatyou are designing for” - unknown</p><p style="margin-bottom: 0.11in">It doesn’t matter what device theuser has. It could be mobile, tablet, desktop, smart watch and etc.Principles of user-centered designs considering the users and theirneeds and goals. UX won’t work if you are not able to findsomething of was hard to complete a task. Designing great experiencefor users is unique art.</p><p style="margin-bottom: 0.11in">Bad UX:-</p><OL><LI><p style="margin-bottom: 0.11in">Designing for yourself</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">One should not design as perhis own perceptions and personal interests. This will attract nousers.</p></OL><LI><p style="margin-bottom: 0.11in">Thinking pretty UI (UserInterface) results in a great experience</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">This assumption is absolutelywrong. Many web applications with pretty fails due to bad userexperience</p></OL></OL><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">So user centered designs driven byuser understandings and insights. There are defined principles toachieve great user experience. Here are they:-</p><OL><LI><p style="margin-bottom: 0.11in">Planning</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Define user needs and insights</p></OL><LI><p style="margin-bottom: 0.11in">Analysis</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Prioritize features based onwhat user actually want. Instead of wasting time on developingsomething that nobody wants</p></OL><LI><p style="margin-bottom: 0.11in">Design</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Create wireframes andprototypes based on user feedback</p></OL><LI><p style="margin-bottom: 0.11in">Implementation</p><LI><p style="margin-bottom: 0.11in">Maintenance</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Continuously do user testingand analysis, get user feedback to improve.</p></OL></OL><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">UX specializations</p><OL><LI><p style="margin-bottom: 0.11in">Interaction Design</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Deals with structure and alsoconcerned with how interface elements respond to user input</p></OL><LI><p style="margin-bottom: 0.11in">Content Strategy</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Ensures that information iscurrent, relevant and useful</p></OL><LI><p style="margin-bottom: 0.11in">User Research</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Understanding human behaviorwith user needs is crucial to designing great experience</p></OL><LI><p style="margin-bottom: 0.11in">Business Objectives</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Understanding objectives andclarifying the problem to dispel any assumption is essential</p></OL><LI><p style="margin-bottom: 0.11in">Information Architecture</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Ensures that structure andnavigation of an experience allows people to accomplish tasks andfind information</p></OL><LI><p style="margin-bottom: 0.11in">Visual design</p><OL TYPE=a><LI><p style="margin-bottom: 0.11in">Concerned with look, feel,branded and colors of final piece</p></OL></OL><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Designing great experience is notabout the type of tool you use. It’s about cultivating a curiosityof people. You get those information by asking these:-</p><OL><LI><p style="margin-bottom: 0.11in">How they think?</p><LI><p style="margin-bottom: 0.11in">What are the goals, need andmotivations?</p><LI><p style="margin-bottom: 0.11in">How do they use products andservices?</p></OL><p style="margin-bottom: 0.11in">“Interface is used as a proxy fora difficult decisions” – Andrew Hinton.</p><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Business requirement analysis</p><p style="margin-bottom: 0.11in"> Business requirements can beanalyzed by asking the clients with following questions:</p><OL><LI><p style="margin-bottom: 0.11in">What are goals of this project?</p><LI><p style="margin-bottom: 0.11in">What does success look like?How will we know when we have been successful?</p><LI><p style="margin-bottom: 0.11in">Who are the users of this site?</p><LI><p style="margin-bottom: 0.11in">Why would they use this productor service?</p><LI><p style="margin-bottom: 0.11in">What problems are they havingthat we can solve?</p></OL><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Asking vs observing</p><p style="margin-bottom: 0.11in"> Asking your customer or targetuser about their experience never ever going to yield you the rightinformation for better user experience. You have to take one stepahead, put your into their work and observe how they behave and howthey work. So observing does the trick not just asking. You should bevery clear on this statement.</p><p style="margin-bottom: 0.11in">The user is ___________ who wants to_______________</p><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Strategy Documents</p><p style="margin-bottom: 0.11in"> Every application must havestrategy document with two portions. Your project may earn some moneyor may not. But it’s always best practice to keep the things clearand make yourself aware why you are doing</p><OL><LI><p style="margin-bottom: 0.11in">Business Goals</p><LI><p style="margin-bottom: 0.11in">User Goals</p></OL><p style="margin-bottom: 0.11in">User Journey Map</p><p style="margin-bottom: 0.11in"> It defines as map of actions andemotions that user experience while using your design from start tofinish. It helps motivation for users and solves complicatedproblems.</p><p style="margin-bottom: 0.11in">Ex: Rail Europe experience map</p><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Wireframes</p><p style="margin-bottom: 0.11in"> Wireframes are simpleskeleton drawings which represents rough visual design or blueprintof the application. Here are some suggested tools to createwireframe:-</p><OL><LI><p style="margin-bottom: 0.11in">Indesign cc</p><LI><p style="margin-bottom: 0.11in">OmniGreffle</p><LI><p style="margin-bottom: 0.11in">Balsmiq mockups</p><LI><p style="margin-bottom: 0.11in">vision</p></OL><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">Prototype</p><p style="margin-bottom: 0.11in"> Prototypes are architecturalmodels which show the flows and interactions of our design. Since weare designing system of components. Prototyping offers the visualsteps through the design. It brings ideas to life and helps to findinteraction design issues early. Quickly iterate so that we refineideas. Reduces development time. It would be reference for otherprojects.</p><p style="margin-bottom: 0.11in">Here are some tools forprototyping:-</p><OL><LI><p style="margin-bottom: 0.11in">sketch3</p><LI><p style="margin-bottom: 0.11in">Invision</p><LI><p style="margin-bottom: 0.11in">Axure</p><LI><p style="margin-bottom: 0.11in">Flinto</p><LI><p style="margin-bottom: 0.11in">Pixate</p><LI><p style="margin-bottom: 0.11in">Keynote</p><LI><p style="margin-bottom: 0.11in">Framer</p><LI><p style="margin-bottom: 0.11in">…..</p></OL><p style="margin-bottom: 0.11in">Still lot more are there. Pleasegoogle yourself.</p><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in">User Testing</p><p style="margin-bottom: 0.11in"> When it comes to testing phase,get some users and make appointment with them. Let them walkthrough our app. Get their opinions and review with the designchanges. It’s more important that your users for testing must bedifferent age group and gender. So you are not biased too heavilytowards one population.</p><p style="margin-bottom: 0.11in"><BR><BR></p><p style="margin-bottom: 0.11in"><A NAME="_GoBack"></A>Strive forgreat user experience… All the best..</p>'
+};
+
+},{}],203:[function(require,module,exports){
+module.exports = {
+    title: 'Web Application Caching',
+    date: '21 June 2017',
+    content: '<p>Yet to write...</p>'
+};
+
+},{}],204:[function(require,module,exports){
+module.exports = {
+    title: 'What Defines You?',
+    date: '21 June 2017',
+    content: '<p>Yet to write...</p>'
+};
+
+},{}],205:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
 var About = React.createClass({displayName: "About",
-    render: function() {
-        return (
-            React.createElement("div", null, 
-                React.createElement("h1", null, "About")
+  render: function() {
+    return (
 
-            )
-        );
-    }
+      React.createElement("div", {className: "row icons-group about-content"}, 
+        React.createElement("h4", {className: "page-title"}, "About me"), 
+        React.createElement("div", {className: "col-xs-4 box"}, 
+          React.createElement("div", {className: "icons"}, React.createElement("i", {className: "fa fa-2x fa-hand-pointer-o"})), 
+          React.createElement("h4", null, "Interaction Design"), 
+          React.createElement("p", {className: "desc"}, "A great interface is based upon solid interaction design")
+        ), 
+        React.createElement("div", {className: "col-xs-4 box"}, 
+          React.createElement("div", {className: "icons"}, React.createElement("i", {className: "fa fa-2x fa-gears"})), 
+          React.createElement("h4", null, "Prototyping"), 
+          React.createElement("p", {className: "desc"}, "A prototype is great for showing new product concepts")
+        ), 
+        React.createElement("div", {className: "col-xs-4 box"}, 
+          React.createElement("div", {className: "icons"}, React.createElement("i", {className: "fa fa-2x fa-address-card-o"})), 
+          React.createElement("h4", null, "Visual Design"), 
+          React.createElement("p", {className: "desc"}, "I strive for effective design. That often comes down to the art of reduction")
+        ), 
+        React.createElement("div", {className: "clearfix"}), 
+        React.createElement("div", {className: "bottom-line"}, 
+          React.createElement("p", {className: "general-desc"}, 
+            "I am a Interaction developer with experience in all aspects of Front end web development including Interaction design, Information Architecture, Javascript, React, Flux, Redux, Backbone, Knockout, Jasmine, Mocha, Node.js, Cordova, Phonegap, Core java, Angular.js, MongoDB."
+          )
+        )
+      )
+    );
+  }
 });
+
 
 module.exports = About;
 
-},{"react":196}],198:[function(require,module,exports){
+},{"react":196}],206:[function(require,module,exports){
 /*eslint-disable strict*/
 
 var React = require('react');
@@ -32019,29 +32097,209 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
-},{"./common/sidebar":200,"jquery":2,"react":196,"react-router":27}],199:[function(require,module,exports){
+},{"./common/sidebar":212,"jquery":2,"react":196,"react-router":27}],207:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var ArticleParser = require('./articleParser');
+var cleanCode = require('../../articleContent/cleanCodeConvention');
+var uxPrincipals = require('../../articleContent/uxPrincipals');
+var bangaloreToKanniyakumari = require('../../articleContent/bangaloreToKanniyakumari');
+var gettingStarterKit = require('../../articleContent/gettingStarterKit');
+var html5WebComponents = require('../../articleContent/html5WebComponents');
+var javascriptHiccups = require('../../articleContent/javascriptHiccups');
+var webApplicationCaching = require('../../articleContent/webApplicationCaching');
+var whatDefinesYou = require('../../articleContent/whatDefinesYou');
+
+var ArticlePage = React.createClass({displayName: "ArticlePage",
+  getInitialState: function() {
+      return {
+          contentData: {
+              title: '',
+              date: '',
+              content: ''
+          }
+      };
+  },
+
+  componentWillMount: function() {
+      var pages = {
+        cleanCode: cleanCode,
+        uxPrincipals: uxPrincipals,
+        bangaloreToKanniyakumari: bangaloreToKanniyakumari,
+        gettingStarterKit: gettingStarterKit,
+        html5WebComponents: html5WebComponents,
+        javascriptHiccups: javascriptHiccups,
+        webApplicationCaching: webApplicationCaching,
+        whatDefinesYou: whatDefinesYou
+      };
+
+      this.setState({contentData: pages[this.props.params.name]});
+  },
+
+  render: function() {
+    return (
+        React.createElement("div", {className: "article-container"}, 
+        React.createElement(ArticleParser, {contentData: this.state.contentData})
+        )
+    );
+  }
+});
+
+module.exports = ArticlePage;
+
+},{"../../articleContent/bangaloreToKanniyakumari":197,"../../articleContent/cleanCodeConvention":198,"../../articleContent/gettingStarterKit":199,"../../articleContent/html5WebComponents":200,"../../articleContent/javascriptHiccups":201,"../../articleContent/uxPrincipals":202,"../../articleContent/webApplicationCaching":203,"../../articleContent/whatDefinesYou":204,"./articleParser":208,"react":196}],208:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var Blog = React.createClass({displayName: "Blog",
+var ArticlePage = React.createClass({displayName: "ArticlePage",
+
     render: function() {
         return (
             React.createElement("div", null, 
-                React.createElement("h1", null, "blog")
-
+                React.createElement("h2", null, " ",  this.props.contentData.title, " "), 
+                React.createElement("div", {className: "article-content"}, 
+                React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props.contentData.content}})
+                )
             )
         );
     }
 });
 
+module.exports = ArticlePage;
+
+},{"react":196}],209:[function(require,module,exports){
+module.exports = {
+   articles: [
+      {
+        id: 'html5WebComponents',
+        title: 'HTML5 Web Components ',
+        description: 'The Next Generation of Web Development'
+      },
+      {
+        id: 'uxPrincipals',
+        title: 'UX Principles',
+        description: '“Design is not just what it looks like, Design is how it works” - Steve Jobs'
+      },
+      {
+        id: 'webApplicationCaching',
+        title: 'Web application caching concerns',
+        description: 'Whenever we use sensitive data in web application. There are some pitfalls which running in the background.'
+      },
+      {
+        id: 'gettingStarterKit',
+        title: 'Getting Starter kit',
+        description: ' Its been always time consuming and tedious job to setup project or searching for starter kit.. We more often get no idea how to search and what to search for well-structured starter kit'
+      },
+      {
+        id: 'cleanCode',
+        title: 'Clean code conventions',
+        description: '“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler'
+      },
+      {
+        id: 'javascriptHiccups',
+        title: 'Javascript Hiccups and solutions',
+        description: '​JavaScript compilers are getting better all the time, but there are certain statement that simply cause the compiler to abort.'
+      },
+      {
+        id: 'bangaloreToKanniyakumari',
+        title: 'Bangalore - Kanniyakumari Bike trip',
+        description: 'My first  step towards my passion for travelling. It was 1400 kms trip. All inspirations came from random thoughts and videos and My senior.'
+      },
+      {
+        id: 'whatDefinesYou',
+        title: 'What defines you ?',
+        description: 'For myself, if you remove the car I drive, the place I live or the titles I hold, I will still be a person driven by my passion to make a positive impact in this world.'
+      },
+      {
+        id: 'video',
+        title: 'Autosave tutorial',
+        description: 'Autosave tutorial',
+        link: 'https://www.youtube.com/watch?v=nzXIpoigzc0'
+      },
+      {
+        id: 'video',
+        title: 'We Secure App',
+        description: 'We Secure App Demo',
+        link: 'https://www.youtube.com/watch?v=AMrejcxwJqk&feature=youtu.be'
+      }
+   ]
+};
+
+},{}],210:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+
+
+var BlogList = React.createClass({displayName: "BlogList",
+  mixins: [
+      Router.Navigation
+  ],
+
+  showArticle: function(articleName, type, event) {
+
+      this.transitionTo('article', { name: articleName});
+  },
+
+  render: function() {
+    var createBlock = function(article) {
+      if(article.id === 'video') {
+        return (
+            React.createElement("div", {className: "article-intro-holder", key: article.title, onClick: this.showArticle.bind(this, article.link, 'video')}, 
+                React.createElement("h3", null, article.title), 
+                React.createElement("p", null, article.description)
+           )
+        );
+      }else {
+        return (
+             React.createElement("div", {className: "article-intro-holder", key: article.id, onClick: this.showArticle.bind(this, article.id)}, 
+                  React.createElement("h3", null, article.title), 
+                  React.createElement("p", null, article.description)
+             )
+         );
+      }
+
+    };
+
+    return (
+        React.createElement("div", null, 
+            this.props.articles.map(createBlock, this)
+        )
+    );
+  }
+});
+
+module.exports = BlogList;
+
+},{"react":196,"react-router":27}],211:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var BlogListItems = require('./blogListItems');
+var BlogListData = require('./blogListData');
+
+var Blog = React.createClass({displayName: "Blog",
+
+  render: function() {
+    return (
+        React.createElement("div", {className: "row blog-content"}, 
+            React.createElement(BlogListItems, {articles: BlogListData.articles})
+        )
+    );
+  }
+});
+
 module.exports = Blog;
 
-},{"react":196}],200:[function(require,module,exports){
+},{"./blogListData":209,"./blogListItems":210,"react":196}],212:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 var Link = require('react-router').Link;
+var IndexLink = require('react-router').IndexLink;
 
 var Sidebar = React.createClass({displayName: "Sidebar",
   render: function() {
@@ -32053,21 +32311,21 @@ var Sidebar = React.createClass({displayName: "Sidebar",
           React.createElement("h3", null, "Mohan")
         ), 
         React.createElement("ul", {className: "sidebar-nav"}, 
-          React.createElement("li", {className: "active", "data-page": "intro"}, 
-          React.createElement(Link, {to: "app"}, "Home")
+          React.createElement("li", {"data-page": "intro"}, 
+          React.createElement(Link, {to: "/", activeClassName: "active", onlyActiveOnIndex: true}, "Home")
           ), 
           React.createElement("li", {"data-page": "about"}, 
-          React.createElement(Link, {to: "about"}, "About")
+          React.createElement(Link, {to: "about", activeClassName: "active", onlyActiveOnIndex: true}, "About")
           ), 
           React.createElement("li", {"data-page": "portfolio"}, 
-            React.createElement(Link, {to: "portfolio"}, "Portfolio")
+            React.createElement(Link, {to: "portfolio", activeClassName: "active", onlyActiveOnIndex: true}, "Portfolio")
           ), 
           React.createElement("li", {"data-page": "blog"}, 
-          React.createElement(Link, {to: "blog"}, "Blog")
+          React.createElement(Link, {to: "blog", activeClassName: "active", onlyActiveOnIndex: true}, "Blog")
 
           ), 
           React.createElement("li", {"data-page": "contact"}, 
-            React.createElement(Link, {to: "contact"}, "Contact")
+            React.createElement(Link, {to: "contact", activeClassName: "active", onlyActiveOnIndex: true}, "Contact")
           )
         )
       )
@@ -32077,7 +32335,7 @@ var Sidebar = React.createClass({displayName: "Sidebar",
 
 module.exports = Sidebar;
 
-},{"react":196,"react-router":27}],201:[function(require,module,exports){
+},{"react":196,"react-router":27}],213:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32085,9 +32343,8 @@ var React = require('react');
 var Contact = React.createClass({displayName: "Contact",
     render: function() {
         return (
-            React.createElement("div", null, 
-                React.createElement("h1", null, "Contact")
-
+            React.createElement("div", {className: "row contact-conent"}, 
+                React.createElement("h3", {className: "text-center"}, "Email: ", React.createElement("a", {href: "mailto:mohan5070@gmail.com"}, "mohan5070@gmail.com"))
             )
         );
     }
@@ -32095,7 +32352,7 @@ var Contact = React.createClass({displayName: "Contact",
 
 module.exports = Contact;
 
-},{"react":196}],202:[function(require,module,exports){
+},{"react":196}],214:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32105,7 +32362,7 @@ var Home = React.createClass({displayName: "Home",
        return (
             React.createElement("div", {className: "row text-center intro-content"}, 
                 React.createElement("div", {className: "image-cropper"}, 
-                    React.createElement("img", {src: "", className: "rounded"})
+                    React.createElement("img", {src: "images/profile.jpg", className: "rounded"})
                 ), 
                 React.createElement("h3", {className: "desig"}, "<WEB DEVELOPER/>"), 
                 React.createElement("div", {className: "icons-group"}, 
@@ -32121,7 +32378,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":196}],203:[function(require,module,exports){
+},{"react":196}],215:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32141,25 +32398,210 @@ var NotFound = React.createClass({displayName: "NotFound",
 
 module.exports = NotFound;
 
-},{"react":196,"react-router":27}],204:[function(require,module,exports){
+},{"react":196,"react-router":27}],216:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var Portfolio = React.createClass({displayName: "Portfolio",
-    render: function() {
-        return (
-            React.createElement("div", null, 
-                React.createElement("h1", null, "portfolio")
+var PortfolioBlock = React.createClass({displayName: "PortfolioBlock",
 
-            )
+  render: function() {
+
+    var createProjectBlock = function(project) {
+        return (
+            React.createElement("div", {className: "project-intro-holder", key: project.id}, 
+            React.createElement("div", {className: "image-holder"}, 
+                React.createElement("img", {src: 'images/' + project.imageName})
+            ), 
+            React.createElement("div", {className: "short-desc"}, 
+             React.createElement("h4", null, React.createElement("a", {href: project.link, target: "_blank"}, project.projectName))
+             )
+        )
         );
-    }
+    };
+
+    return (
+        React.createElement("div", null, 
+            this.props.projects.map(createProjectBlock, this)
+        )
+    );
+  }
+});
+
+module.exports = PortfolioBlock;
+
+},{"react":196}],217:[function(require,module,exports){
+module.exports = {
+    projects:
+    [
+        {
+            id: 'halolynx',
+            projectName: 'HaloLynx Admin Portal',
+            imageName: 'insurethegap.png',
+            link: 'https://www.haloinsurance.com/products/'
+        },
+        {
+            id: 'chrysalis',
+            projectName: 'key2key v4 Admin Portal',
+            imageName: 'key2key.png',
+            link: 'https://key2key.net/'
+        },
+        {
+            id: 'meridium_v4',
+            projectName: 'Meridium APM',
+            imageName: 'meridium_v4.png',
+            link: 'https://www.youtube.com/watch?v=rXnpX8-BbJU'
+        },
+        {
+            id: 'management_console',
+            projectName: 'Admin Management Console',
+            imageName: 'meridium.jpg',
+            link: 'https://www.meridium.com/nextgenapm'
+        },
+        {
+            id: 'photoshare',
+            projectName: 'Photoshare Desktop App',
+            imageName: 'photoshare_app.jpg',
+            link: 'http://gavinwadephoto.com/'
+        },
+        {
+            id: 'restarunt_app',
+            projectName: 'Restaurant App',
+            imageName: 'restarunt_app.jpg',
+            link: ''
+        },
+        {
+            id: 'guess_the_word',
+            projectName: 'Guess The Word',
+            imageName: 'guess_the_word.jpg',
+            link: ''
+        },
+        {
+            id: 'wesecure_app',
+            projectName: 'WeSecure App',
+            imageName: 'wesecure_app.png',
+            link: 'http://www.youtube.com/watch?v=AMrejcxwJqk'
+        },
+        {
+            id: 'wesecure',
+            projectName: 'WeSecure',
+            imageName: 'wesecure.jpg',
+            link: 'http://wesecure.mantralabsglobal.com/'
+        },
+        {
+            id: 'writewiz',
+            projectName: 'Write Wiz',
+            imageName: 'writewiz.png',
+            link: 'http://lanchestteracademy.com/'
+        },
+        {
+            id: 'gocartel',
+            projectName: 'Go Cartel',
+            imageName: 'go_cartel.png',
+            link: 'http://gocartel.com/'
+        },
+        {
+            id: 'yourresults',
+            projectName: 'Your Results',
+            imageName: 'yourresults.png',
+            link: 'http://yourresults.in/'
+        },
+        {
+            id: 'wishlist',
+            projectName: 'Wish List',
+            imageName: 'wishlish.png',
+            link: 'http://wishlist.com/'
+        },
+        {
+            id: 'repliably',
+            projectName: 'Repliably',
+            imageName: 'repliably.png',
+            link: 'http://repliably.com/'
+        },
+        {
+            id: 'gsf',
+            projectName: 'GSF India',
+            imageName: 'gsf.jpg',
+            link: 'http://www.gsfindia.com/'
+        },
+        {
+            id: 'luminious',
+            projectName: 'Luminious',
+            imageName: 'luminious.png',
+            link: 'http://eluminos.com/'
+        },
+        {
+            id: 'luminious',
+            projectName: 'eLuminious App',
+            imageName: 'eluminos_app.png',
+            link: 'http://eluminos.com/'
+        },
+        {
+            id: 'sketcher',
+            projectName: 'Sketcher',
+            imageName: 'sketcher.png',
+            link: 'http://sketcher.twag.co/'
+        },
+
+        {
+            id: 'touchweb',
+            projectName: 'Touch Web',
+            imageName: 'touchweb.png',
+            link: 'https://www.touchwebag.com/'
+        },
+        {
+            id: 'vinofinder_admin',
+            projectName: 'Vinofinder Admin Portal',
+            imageName: 'vinofinder_admin.png',
+            link: 'http://vinofinder.mantralabsglobal.com/'
+        },
+        {
+            id: 'vinofinder',
+            projectName: 'Vinofinder',
+            imageName: 'vinofinder.png',
+            link: 'http://vinofinder.mantralabsglobal.com/'
+        },
+        {
+            id: 'kea',
+            projectName: 'KEA',
+            imageName: 'kea.png',
+            link: 'http://www.kea.co.in/'
+        },
+        {
+            id: 'bestview',
+            projectName: 'Best View Design',
+            imageName: 'bestview.png',
+            link: 'http://bestviewdesign.com/'
+        }
+    ]
+};
+
+},{}],218:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var ProjectsData = require('./portfolioData');
+var PortfolioBlock = require('./porfolioIntroBlock');
+
+var Portfolio = React.createClass({displayName: "Portfolio",
+  getInitialState: function() {
+      return {
+          projects: ProjectsData.projects
+      };
+  },
+
+  render: function() {
+    return (
+      React.createElement("div", {className: "row portfolio-content"}, 
+         React.createElement(PortfolioBlock, {projects: this.state.projects})
+      )
+    );
+  }
 });
 
 module.exports = Portfolio;
 
-},{"react":196}],205:[function(require,module,exports){
+},{"./porfolioIntroBlock":216,"./portfolioData":217,"react":196}],219:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var Router = require('react-router');
@@ -32168,7 +32610,7 @@ var routes = require('./routes');
 Router.run(routes, function(Handler) {
     React.render(React.createElement(Handler, null), document.getElementById('app'));
 });
-},{"./routes":206,"react":196,"react-router":27}],206:[function(require,module,exports){
+},{"./routes":220,"react":196,"react-router":27}],220:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -32188,10 +32630,11 @@ var routes = (
         React.createElement(Route, {name: "about", handler: require('./components/about/aboutPage')}), 
         React.createElement(Route, {name: "portfolio", handler: require('./components/portfolio/portfolioPage')}), 
         React.createElement(Route, {name: "blog", handler: require('./components/blog/blogPage')}), 
+        React.createElement(Route, {name: "article", path: "article/:name", handler: require('./components/articles/articlePage')}), 
         React.createElement(Route, {name: "contact", handler: require('./components/contact/contactPage')})
     )
     );
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":197,"./components/app":198,"./components/blog/blogPage":199,"./components/contact/contactPage":201,"./components/homePage":202,"./components/notFoundPage":203,"./components/portfolio/portfolioPage":204,"react":196,"react-router":27}]},{},[205]);
+},{"./components/about/aboutPage":205,"./components/app":206,"./components/articles/articlePage":207,"./components/blog/blogPage":211,"./components/contact/contactPage":213,"./components/homePage":214,"./components/notFoundPage":215,"./components/portfolio/portfolioPage":218,"react":196,"react-router":27}]},{},[219]);
